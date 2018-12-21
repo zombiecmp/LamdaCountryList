@@ -5,7 +5,7 @@ Resources:
   CDDemoLambda:
     Type: 'AWS::Serverless::Function'
     Properties:
-	  FunctionName: CountryManager
+      FunctionName: CountryManager
       Handler: CountryManager::CountryManager.Function::Get
       Runtime: dotnetcore2.1
       CodeUri: CountryManager/bin/Release/netcoreapp2.1/publish
