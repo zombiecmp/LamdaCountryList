@@ -8,21 +8,22 @@ using Amazon.Lambda.Core;
 using Amazon.Lambda.TestUtilities;
 
 using CountryManager;
+using Amazon.Lambda.APIGatewayEvents;
 
 namespace CountryManager.Tests
 {
     public class FunctionTest
     {
         [Fact]
-        public void TestToUpperFunction()
+        public void TestGetCountriesFunction()
         {
+            var request = new APIGatewayProxyRequest();
 
-            // Invoke the lambda function and confirm the string was upper cased.
             var function = new Function();
             var context = new TestLambdaContext();
-            var upperCase = function.FunctionHandler("hello world", context);
+            var response = function.Get(request, context);
 
-            Assert.Equal("HELLO WORLD", upperCase);
+            Assert.Equal(200, response.StatusCode);
         }
     }
 }
