@@ -2,5 +2,10 @@ version: 0.1
 phases:
   install:
     commands:
-      - sam package –template-file samTemplate.yaml –s3-bucket zombie-lambda-pipeline --output-template-file outputSamTemplate.yaml
-      - sam deploy –template-file outputSamTemplate.yaml –stack-name mySafeDeployStack –capabilities CAPABILITY_IAM
+      - sam package –-template-file samTemplate.yaml –-s3-bucket zombie-lambda-pipeline --output-template-file outputSamTemplate.yaml
+      - sam deploy –-template-file outputSamTemplate.yaml –-stack-name mySafeDeployStack –-capabilities CAPABILITY_IAM
+artifacts:
+  type: zip
+  files:
+    - samTemplate.yaml
+    - outputSamTemplate.yaml
