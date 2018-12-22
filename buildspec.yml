@@ -2,8 +2,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - aws sam package –-template-file samTemplate.yaml –-s3-bucket zombie-lambda-pipeline --output-template-file outputSamTemplate.yaml
-      - aws sam deploy –-template-file outputSamTemplate.yaml –-stack-name mySafeDeployStack –-capabilities CAPABILITY_IAM
+      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket zombie-lambda-pipeline --output-template-file outputSamTemplate.yaml      
 artifacts:
   type: zip
   files:
