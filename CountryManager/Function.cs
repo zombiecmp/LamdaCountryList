@@ -28,7 +28,8 @@ namespace CountryManager
             return CreateResponse(new List<string>()
             {
                 "Uruguay",
-                "Cuba"
+                "Cuba",
+                "Argentina"
             });
         }
 
