@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: .Net Lambda Country List
 Resources:
-  CDDemoLambda:
+  CountryManager:
     Type: 'AWS::Serverless::Function'
     Properties:
       FunctionName: CountryManager
