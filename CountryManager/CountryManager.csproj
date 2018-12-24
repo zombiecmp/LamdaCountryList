@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <GenerateManifests>true</GenerateManifests>
     <AWSProjectType>Lambda</AWSProjectType>
   </PropertyGroup>
 
