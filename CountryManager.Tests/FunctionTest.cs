@@ -19,7 +19,7 @@ namespace CountryManager.Tests
         {
             var request = new APIGatewayProxyRequest();
 
-            var function = new Function();
+            var function = new Functions();
             var context = new TestLambdaContext();
             var response = function.Get(request, context);
 

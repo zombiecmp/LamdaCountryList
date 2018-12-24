@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 namespace CountryManager
 {
-    public class Function
+    public class Functions
     {
         
         /// <summary>
