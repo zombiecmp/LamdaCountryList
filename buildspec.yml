@@ -3,8 +3,12 @@ phases:
   install:
     commands:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket zombie-lambda-pipeline --output-template-file outputSamTemplate.yaml
+  build:
+    commands:
+      - dotnet publish -c release -o ./build_output CountryManager/CountryManager.csproj
+
 artifacts:
-  type: zip
   files:
     - samTemplate.yaml
     - outputSamTemplate.yaml
+    - CountryManager/build_output/**/*
